@@ -74,7 +74,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const ws = new WebSocket("wss://karma.cloud.strixthekiet.me/api/12");
+    const ws = new WebSocket("wss://karma.cloud.strixthekiet.me/api/2143");
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
@@ -108,11 +108,11 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen px-24 space-y-4">
+    <div className="h-screen px-24 py-8 space-y-4">
       <h2 className="text-2xl text-center font-bold col-span-2">
         Machine Learning Project
       </h2>
-      <div className="grid grid-cols-2 gap-4 h-[45vh] mb-4">
+      <div className="grid grid-cols-2 gap-4 h-min mb-4">
         {/* Metrics Section */}
         <Card className="p-6 space-y-4">
           <h2 className="text-2xl font-bold">Metrics</h2>
