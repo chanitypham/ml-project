@@ -75,7 +75,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const ws = new WebSocket("wss://karma.cloud.strixthekiet.me/api/2143");
+    const ws = new WebSocket("wss://karma.cloud.strixthekiet.me/api/12");
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
@@ -116,7 +116,7 @@ export default function Home() {
       <div className="grid grid-cols-2 gap-4 h-min mb-4">
         {/* Metrics Section */}
         <Card className="p-6 space-y-4">
-          <h2 className="text-2xl font-bold">Metrics</h2>
+          <h2 className="text-xl font-bold">Metrics</h2>
           <div className="space-y-3 ">
             <div className="flex justify-between items-center">
               <span>Total Tweets:</span>
@@ -148,8 +148,9 @@ export default function Home() {
         {/* Chart Section */}
         <Card className="flex flex-col">
           <CardHeader className="items-center pb-0">
-            <CardTitle>Sentiment Distribution</CardTitle>
-            <CardDescription>Real-time Analysis</CardDescription>
+            <CardTitle className="text-xl font-bold">
+              Sentiment Distribution
+            </CardTitle>
           </CardHeader>
           <CardContent className="flex-1">
             <ChartContainer
