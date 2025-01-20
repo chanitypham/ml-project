@@ -74,8 +74,10 @@ export default function Home() {
     Total: 0,
   });
 
+  const rd = Math.floor(Math.random() * 100000);
+
   useEffect(() => {
-    const ws = new WebSocket("wss://karma.cloud.strixthekiet.me/api/12");
+    const ws = new WebSocket(`wss://karma.cloud.strixthekiet.me/api/${rd}`);
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
